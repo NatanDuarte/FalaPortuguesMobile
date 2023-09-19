@@ -1,6 +1,9 @@
 # falaportugues - mobile version
 
-![light screenshot](./assets/Screenshot_light.png) ![dark screenshot](./assets/Screenshot_dark.png)
+<div>
+    <img alt="light screenshot" height="50%" src="./assets/Screenshot_light.png" width="50%"/>
+    <img alt="dark screenshot" height="50%" src="./assets/Screenshot_dark.png" width="50%"/>
+</div>
 
 APP to generate new workspace trend name compose
 by a random adjective followed by a [workspace related noun](./app/src/main/assets/job-nouns.json).
@@ -10,6 +13,6 @@ inspired on the amazing work: [falaportugues](https://github.com/JMoicano/falapo
 
 ## Demo
 
-<img alt="light mode" src="./assets/demo-light-mode.gif" width="50%" height="50%"/>
+<img alt="light mode" src="./assets/demo-light-mode.gif" width="100%" height="70%"/>
 
-<img alt="dark mode" src="./assets/demo-dark-mode.gif" width="50%" height="50%" />
+<img alt="dark mode" src="./assets/demo-dark-mode.gif" width="100%" height="70%" />
