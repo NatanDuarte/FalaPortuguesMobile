@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fala Português</string>
+    <string name="a_nova_tend_ncia_do_mercado">A nova tendência do mercado é:</string>
+    <string name="nova_trend">Nova Trend</string>
+    <string name="novo_adjetivo">Novo adjetivo</string>
+    <string name="novo_substantivo">Novo substantivo</string>
+    <string name="socialism">☭</string>
+    <string name="clipboard">clipboard</string>
 </resources>
