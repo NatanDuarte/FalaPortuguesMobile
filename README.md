@@ -1,8 +1,8 @@
 # falaportugues - mobile version
 
-<div>
-    <img alt="light screenshot" height="50%" src="./assets/Screenshot_light.png" width="50%"/>
-    <img alt="dark screenshot" height="50%" src="./assets/Screenshot_dark.png" width="50%"/>
+<div align="center">
+    <img alt="light screenshot" height="30%" src="./assets/Screenshot_light.png" width="50%"/>
+    <img alt="dark screenshot" height="30%" src="./assets/Screenshot_dark.png" width="50%"/>
 </div>
 
 APP to generate new workspace trend name compose
