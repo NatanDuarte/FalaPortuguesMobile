@@ -8,8 +8,8 @@ inspired on the amazing work: [falaportugues](https://github.com/JMoicano/falapo
 
 ## Demo
 
-<img alt="light mode" height="350" src="./assets/demo-light-mode.gif" width="500"/>
+<img alt="light mode" src="./assets/demo-light-mode.gif" width="50%" height="50%"/>
 
-<img alt="dark mode" height="350" src="./assets/demo-dark-mode.gif" width="500"/>
+<img alt="dark mode" src="./assets/demo-dark-mode.gif" width="50%" height="50%" />
 
 ## [Download]()
