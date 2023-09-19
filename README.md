@@ -3,8 +3,8 @@
 <div align="center">
     <table>
         <tr>
-            <img alt="light screenshot" height="20%" src="./assets/Screenshot_light.png" width="30%"/>
-            <img alt="dark screenshot" height="20%" src="./assets/Screenshot_dark.png" width="30%"/>
+            <td style="padding: 10px;"><img alt="light screenshot" src="./assets/Screenshot_light.png" width="45%" /></td>
+            <td style="padding: 10px;"><img alt="dark screenshot" src="./assets/Screenshot_dark.png" width="45%" /></td>
         </tr>
     </table>
 </div>
