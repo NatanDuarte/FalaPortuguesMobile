@@ -17,6 +17,17 @@ inspired on the amazing work: [falaportugues](https://github.com/JMoicano/falapo
 
 ## Demo
 
+* Darkmode and Lightmode
+* Generate workspace trend name
+* Add trend name to clipboard
+
 <img alt="light mode" src="./assets/demo-light-mode.gif" width="100%" height="70%"/>
 
 <img alt="dark mode" src="./assets/demo-dark-mode.gif" width="100%" height="70%" />
+
+### What I learned
+
+* Solidified my MVVM knowledge
+* Solidified my Android Lifecycle knowledge
+* API consumption with Retrofit
+* APP customization
