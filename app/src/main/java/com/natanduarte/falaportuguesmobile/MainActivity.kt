@@ -5,6 +5,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -16,18 +17,16 @@ import com.natanduarte.falaportuguesmobile.viewmodel.main.MainViewModel
 import com.natanduarte.falaportuguesmobile.viewmodel.main.MainViewModelFactory
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity(
+    private var randomNoun: String = "",
+    private var adjective: String = ""
+) : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
     lateinit var viewModel: MainViewModel
 
     private val retrofitService = RetrofitService.getInstance()
-
-    private var adjective: String = ""
-
-    private var randomNoun: String = ""
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,44 +40,46 @@ class MainActivity : AppCompatActivity() {
             MainViewModelFactory(MainRepository(retrofitService))
         )[MainViewModel::class.java]
 
+        loadInitialData()
+
         binding.mainTerm.setOnClickListener {
             copyTextToClipboard(binding.mainTerm.text.toString())
         }
 
         binding.newTrend.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
             randomNoun = getRandomNoun()
             viewModel.getAdjective()
         }
 
         binding.newAdjective.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
             viewModel.getAdjective()
         }
 
         binding.newNoun.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
             randomNoun = getRandomNoun()
             updateMainTerm()
+            binding.progressBar.visibility = View.GONE
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-
+    private fun loadInitialData() {
         randomNoun = getRandomNoun()
 
         viewModel.adjectives.observe(this) { adjectives ->
             adjective = adjectives[0]
+            binding.progressBar.visibility = View.GONE
             updateMainTerm()
         }
 
         viewModel.errorMessage.observe(this) { message ->
+            binding.progressBar.visibility = View.GONE
             Toast
                 .makeText(this, message, Toast.LENGTH_SHORT)
                 .show()
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
 
         viewModel.getAdjective()
     }
